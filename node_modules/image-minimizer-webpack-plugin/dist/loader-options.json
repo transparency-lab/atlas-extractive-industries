@@ -1,0 +1,33 @@
+{
+  "title": "Image Minimizer Plugin Loader options",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "minimizerOptions": {
+      "description": "Options for `imageMinimizerOptions`.",
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "filter": {
+      "description": "Allows filtering of images for optimization.",
+      "instanceof": "Function"
+    },
+    "severityError": {
+      "description": "Allows to choose how errors are displayed.",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "filename": {
+      "type": "string"
+    },
+    "deleteOriginalAssets": {
+      "type": "boolean"
+    }
+  }
+}
