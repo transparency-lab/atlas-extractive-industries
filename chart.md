@@ -1,133 +1,132 @@
 ---
 layout: page
-title: "D3 chart"
+title: "Circle Packing preview"
 permalink: /chart/
 d3: "d3"
 ---
 
+<meta charset="utf-8">
+
+This is supposed to be a test of D3
+<div id="my_dataviz"></div>
+
+
 <style>
-
-
-path {
-  fill-rule: evenodd;
-  stroke: #333;
-  stroke-width: 2px;
+.node:hover{
+  stroke-width: 7px !important;
+  opacity: 1 !important;
 }
-
-.sun path {
-  fill: #6baed6;
-}
-
-.planet path {
-  fill: #9ecae1;
-}
-
-.annulus path {
-  fill: #c6dbef;
-}
-
 </style>
-<form>
-  <input type="radio" name="reference" id="ref-annulus">
-  <label for="ref-annulus">Annulus</label><br>
-  <input type="radio" name="reference" id="ref-planet" checked>
-  <label for="ref-planet">Planets</label><br>
-  <input type="radio" name="reference" id="ref-sun">
-  <label for="ref-sun">Sun</label>
-</form>
 
 <script>
 
-var width = 960,
-    height = 500,
-    radius = 80,
-    x = Math.sin(2 * Math.PI / 3),
-    y = Math.cos(2 * Math.PI / 3);
+// set the dimensions and margins of the graph
+var width = 460
+var height = 460
 
-var offset = 0,
-    speed = 4,
-    start = Date.now();
-
-var svg = d3.select("body").append("svg")
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
     .attr("width", width)
     .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(.55)")
-  .append("g");
 
-var frame = svg.append("g")
-    .datum({radius: Infinity});
+// Read data
+d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/11_SevCatOneNumNestedOneObsPerGroup.csv", function(data) {
 
-frame.append("g")
-    .attr("class", "annulus")
-    .datum({teeth: 80, radius: -radius * 5, annulus: true})
-  .append("path")
-    .attr("d", gear);
+  // Filter a bit the data -> more than 1 million inhabitants
+  data = data.filter(function(d){ return d.value>10000000 })
 
-frame.append("g")
-    .attr("class", "sun")
-    .datum({teeth: 16, radius: radius})
-  .append("path")
-    .attr("d", gear);
+  // Color palette for continents?
+  var color = d3.scaleOrdinal()
+    .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"])
+    .range(d3.schemeSet1);
 
-frame.append("g")
-    .attr("class", "planet")
-    .attr("transform", "translate(0,-" + radius * 3 + ")")
-    .datum({teeth: 32, radius: -radius * 2})
-  .append("path")
-    .attr("d", gear);
+  // Size scale for countries
+  var size = d3.scaleLinear()
+    .domain([0, 1400000000])
+    .range([7,55])  // circle will be between 7 and 55 px wide
 
-frame.append("g")
-    .attr("class", "planet")
-    .attr("transform", "translate(" + -radius * 3 * x + "," + -radius * 3 * y + ")")
-    .datum({teeth: 32, radius: -radius * 2})
-  .append("path")
-    .attr("d", gear);
+  // create a tooltip
+  var Tooltip = d3.select("#my_dataviz")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
 
-frame.append("g")
-    .attr("class", "planet")
-    .attr("transform", "translate(" + radius * 3 * x + "," + -radius * 3 * y + ")")
-    .datum({teeth: 32, radius: -radius * 2})
-  .append("path")
-    .attr("d", gear);
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    Tooltip
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    Tooltip
+      .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
+      .style("left", (d3.mouse(this)[0]+20) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    Tooltip
+      .style("opacity", 0)
+  }
 
-d3.selectAll("input[name=reference]")
-  .data([radius * 5, Infinity, -radius])
-    .on("change", function(radius1) {
-      var radius0 = frame.datum().radius, angle = (Date.now() - start) * speed;
-      frame.datum({radius: radius1});
-      svg.attr("transform", "rotate(" + (offset += angle / radius0 - angle / radius1) + ")");
-    });
+  // Initialize the circle: all located at the center of the svg area
+  var node = svg.append("g")
+    .selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("class", "node")
+      .attr("r", function(d){ return size(d.value)})
+      .attr("cx", width / 2)
+      .attr("cy", height / 2)
+      .style("fill", function(d){ return color(d.region)})
+      .style("fill-opacity", 0.8)
+      .attr("stroke", "black")
+      .style("stroke-width", 1)
+      .on("mouseover", mouseover) // What to do when hovered
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave)
+      .call(d3.drag() // call specific function when circle is dragged
+           .on("start", dragstarted)
+           .on("drag", dragged)
+           .on("end", dragended));
 
-d3.selectAll("input[name=speed]")
-    .on("change", function() { speed = +this.value; });
+  // Features of the forces applied to the nodes:
+  var simulation = d3.forceSimulation()
+      .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+      .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+      .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
 
-function gear(d) {
-  var n = d.teeth,
-      r2 = Math.abs(d.radius),
-      r0 = r2 - 8,
-      r1 = r2 + 8,
-      r3 = d.annulus ? (r3 = r0, r0 = r1, r1 = r3, r2 + 20) : 20,
-      da = Math.PI / n,
-      a0 = -Math.PI / 2 + (d.annulus ? Math.PI / n : 0),
-      i = -1,
-      path = ["M", r0 * Math.cos(a0), ",", r0 * Math.sin(a0)];
-  while (++i < n) path.push(
-      "A", r0, ",", r0, " 0 0,1 ", r0 * Math.cos(a0 += da), ",", r0 * Math.sin(a0),
-      "L", r2 * Math.cos(a0), ",", r2 * Math.sin(a0),
-      "L", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
-      "A", r1, ",", r1, " 0 0,1 ", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
-      "L", r2 * Math.cos(a0 += da / 3), ",", r2 * Math.sin(a0),
-      "L", r0 * Math.cos(a0), ",", r0 * Math.sin(a0));
-  path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
-  return path.join("");
-}
+  // Apply these forces to the nodes and update their positions.
+  // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+  simulation
+      .nodes(data)
+      .on("tick", function(d){
+        node
+            .attr("cx", function(d){ return d.x; })
+            .attr("cy", function(d){ return d.y; })
+      });
 
-d3.timer(function() {
-  var angle = (Date.now() - start) * speed,
-      transform = function(d) { return "rotate(" + angle / d.radius + ")"; };
-  frame.selectAll("path").attr("transform", transform);
-  frame.attr("transform", transform); // frame of reference
-});
+  // What happens when a circle is dragged?
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(.03).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(.03);
+    d.fx = null;
+    d.fy = null;
+  }
+
+})
 
 </script>
