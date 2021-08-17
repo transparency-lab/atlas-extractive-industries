@@ -1,0 +1,67 @@
+current directory: /Users/anneleesteele/dev/transparency-lab/vendor/bundle/ruby/2.6.0/gems/ffi-1.9.18/ext/ffi_c
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20210817-33027-1cg0mwo.rb extconf.rb
+checking for ffi_call() in -lffi... yes
+checking for ffi_prep_closure()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for shlwapi.h... no
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... yes
+creating extconf.h
+creating Makefile
+
+current directory: /Users/anneleesteele/dev/transparency-lab/vendor/bundle/ruby/2.6.0/gems/ffi-1.9.18/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /Users/anneleesteele/dev/transparency-lab/vendor/bundle/ruby/2.6.0/gems/ffi-1.9.18/ext/ffi_c
+make "DESTDIR="
+compiling AbstractMemory.c
+compiling ArrayType.c
+compiling Buffer.c
+compiling Call.c
+Call.c:355:5: warning: implicit declaration of function 'rb_thread_call_without_gvl' is invalid in C99 [-Wimplicit-function-declaration]
+    rbffi_thread_blocking_region(call_blocking_function, data, (void *) -1, NULL);
+    ^
+./Thread.h:78:39: note: expanded from macro 'rbffi_thread_blocking_region'
+# define rbffi_thread_blocking_region rb_thread_call_without_gvl
+                                      ^
+1 warning generated.
+compiling ClosurePool.c
+compiling DataConverter.c
+compiling DynamicLibrary.c
+compiling Function.c
+Function.c:563:9: warning: implicit declaration of function 'rb_thread_call_without_gvl' is invalid in C99 [-Wimplicit-function-declaration]
+        rb_thread_call_without_gvl(async_cb_wait, &w, async_cb_stop, &w);
+        ^
+Function.c:948:17: warning: 'ffi_prep_closure' is deprecated [-Wdeprecated-declarations]
+    ffiStatus = ffi_prep_closure(code, &fnInfo->ffi_cif, callback_invoke, closure);
+                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/ffi/ffi.h:348:18: note: 'ffi_prep_closure' has been explicitly marked deprecated here
+  __attribute__((deprecated))
+                 ^
+2 warnings generated.
+compiling FunctionInfo.c
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+compiling MemoryPointer.c
+compiling MethodHandle.c
+compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByReference.c
+compiling StructByValue.c
+compiling StructLayout.c
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+compiling Variadic.c
+compiling ffi.c
+linking shared-object ffi_c.bundle
+ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
+
+current directory: /Users/anneleesteele/dev/transparency-lab/vendor/bundle/ruby/2.6.0/gems/ffi-1.9.18/ext/ffi_c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210817-33027-xc3bkq
