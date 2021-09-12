@@ -4,3 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
+
+Atlas of Extractive Industries
+{{ site.data.page_data.title }}
+{{ site.data.page_data.title.description }}
