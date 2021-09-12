@@ -17,7 +17,9 @@ exclude:
 
 bundle exec jekyll serve
 
-copy about.md into new file chart.md, copy d3.js code there``
+copy about.md into new file chart.md, copy d3.js code there
+
+bundle exec jekyll serve``
 
 Extra: if you want to move styles or scripts to <head>
 

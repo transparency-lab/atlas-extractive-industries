@@ -21,8 +21,8 @@ This is supposed to be a test of D3
 <script>
 
 // set the dimensions and margins of the graph
-var width = 460
-var height = 460
+var width = 900
+var height = 600
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")

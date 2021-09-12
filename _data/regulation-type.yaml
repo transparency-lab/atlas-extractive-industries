@@ -1,0 +1,16 @@
+---
+- name: Mandatory Legal Framework
+  color-main: 6B9671
+  color-secondary: 47804F
+- name: Guidelines
+  color-main: DFD594
+  color-secondary: B9AD61
+- name: Voluntary Standards
+  color-main: BC8C4C
+  color-secondary: AA752F
+- name: Certification Schemes
+  color-main: 70ADB9
+  color-secondary: B4D7DE
+- name: Traceability Providers
+  color-main: D29D96
+  color-secondary: 9B625B
