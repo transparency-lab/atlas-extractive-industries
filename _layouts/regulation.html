@@ -2,18 +2,18 @@
 layout: default
 ---
 
-<article>
+<article class="regulation">
   <div>
-    <h1>{{ page.title }}</h1>
+    <h1 class="mand-reg-title">{{ page.title }}</h1>
   </div>
 
-  <div id="regulation-wrapper">
+  <div class="reg-wrapper mand-reg-wrapper">
 
-  {{ page.content }}
-  {% include reg-comm.html %}
-  {% include reg-type.html %}
-  {% include reg-org.html %}
-  {% include reg-desc.html %}
+  <h3>Related Commodity:</h3> <div class="border_style">{{ page.related_commodity }}</div>
+  <h3>Type of Regulation:</h3> <div class="border_style">{{ page.regulation_type }}</div>
+  <h3>Country or Organisation:</h3> <div class="border_style">{{ page.organisation }}</div>
+
+  {{ content }}
 
   </div>
 </article>

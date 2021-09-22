@@ -32,3 +32,5 @@ cp /Users/timoalakoski/Documents/projects/jekyll-d3/vendor/bundle/ruby/2.0.0/gem
       <script src="https://d3js.org/d3.v4.min.js"></script>
     {% endif %}
 {% endraw %} ``
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a48ba42f-1de2-4b10-aef3-94655db59872/deploy-status)](https://app.netlify.com/sites/wonderful-pike-eda3a9/deploys)
