@@ -1,0 +1,11 @@
+---
+- name: Mandatory Legal Framework
+  layout: mandatory
+- name: Guidelines
+  layout: guidelines
+- name: Voluntary Standards
+  layout: voluntary
+- name: Certification Schemes
+  layout: certification
+- name: Traceability Providers
+  layout: traceability

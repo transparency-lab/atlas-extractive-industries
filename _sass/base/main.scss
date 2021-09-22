@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Abel&family=AvenirNext&display=swap');
+
 $color-primary: hsl(0, 0%, 10%);
 $color-text: hsl(0, 0%, 20%);
 $color-subtext: hsl(0, 0%, 30%);
 $color-border: hsl(0, 0%, 85%);
 $color-box-background: mix($color-primary, white, 4%);
 $border-radius: 4px;
-$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+$header-text: 'Avenir Next';
+$font-family: 'Abel', 'Open Sans', 'Roboto', sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
 body {
   box-sizing: content-box;
@@ -78,6 +81,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $header-text;
   line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;

@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include header.html %}
+
+  {% assign layout == site.data.regulation_info %}
+  {{ layout }}
+  {% if layout.name == page.regulation_type %}
+  <body class="{{ layout.layout }}">
+  {% else %}
   <body>
+  {% endif %}
     <header>{% include nav.html %}</header>
     <div class="wrapper">
       <main>{{ content }}</main>

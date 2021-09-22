@@ -8,3 +8,11 @@ layout: default
 Atlas of Extractive Industries
 {{ site.data.page_data.title }}
 {{ site.data.page_data.title.description }}
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

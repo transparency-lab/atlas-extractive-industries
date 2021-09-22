@@ -1,0 +1,45 @@
+.regulation {
+  h1, h3 {
+    color: #4A4A4A;
+  }
+}
+
+body.mandatory {
+  background-color: #6B9671;
+
+  &-snippet {
+    background-color: #47804F;
+  }
+}
+
+body.guidelines {
+  background-color: #DFD594;
+
+  &-snippet {
+    background-color: #B9AD61;
+  }
+}
+
+body.voluntary {
+  background-color: #BC8C4C;
+
+  &-snippet {
+    background-color: #AA752F;
+  }
+}
+
+body.certification {
+  background-color: #69A6B1;
+
+  &-snippet {
+    background-color: #B4D7DE;
+  }
+}
+
+body.traceability {
+  background-color: #D29D96;
+
+  &-snippet {
+    background-color: #9B625B;
+  }
+}
