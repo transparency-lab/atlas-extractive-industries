@@ -3,7 +3,7 @@ layout: regulation
 title:  Fair Trade Gold
 organisation: Fair Trade Foundation/Max Havelaar
 year: 2013
-related_commodity: Gold
+categories: Gold
 regulation_type: Certification Schemes
 permalink: /fair-trade-gold
 tags: environment, conflict, labour

@@ -3,7 +3,7 @@ layout: regulation
 title:  GRI Mining and Metal Supplement Sustainability Reporting Guidelines
 organisation: Global Reporting Initiative
 year: 2011
-related_commodity: Any
+categories: Any
 regulation_type: Guidelines
 permalink: /gri-mining-minerals
 tags: sustainability, labour, conflict

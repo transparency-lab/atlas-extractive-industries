@@ -3,7 +3,7 @@ layout: regulation
 title:  EU Conflict Minerals Regulation
 organisation: European Union
 year: 2021
-related_commodity: 3Ts, Gold
+categories: 3Ts, Gold
 regulation_type: Mandatory Legal Framework
 permalink: /eu-conflict-minerals
 tags: conflict, labour

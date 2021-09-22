@@ -3,7 +3,7 @@ layout: regulation
 title:  International Finance Corporation Performance Standards/EHS
 organisation: World Bank
 year: 2006
-related_commodity: Any
+categories: Any
 regulation_type: Voluntary Standards
 permalink: /ifc-performance-stand
 tags: environment, labour

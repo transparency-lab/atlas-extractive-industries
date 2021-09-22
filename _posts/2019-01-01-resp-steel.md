@@ -3,7 +3,7 @@ layout: regulation
 title:  ResponsibleSteel Assurance
 organisation: ResponsibleSteel
 year: 2019
-related_commodity: Steel, Iron Ore
+categories: Steel, Iron Ore
 regulation_type: Certification Schemes
 permalink: /resp-steel
 tags: environment, labour, conflict

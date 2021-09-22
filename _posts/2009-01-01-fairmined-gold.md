@@ -3,7 +3,7 @@ layout: regulation
 title:  Fairmined Gold and Fairmined Ecological Gold
 organisation: Alliance for Responsible Mining (ARM)
 year: 2009, 2014
-related_commodity: Gold
+categories: Gold
 regulation_type: Certification Schemes
 permalink: /fairmined-gold
 tags: environment, conflict, labour

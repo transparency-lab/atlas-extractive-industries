@@ -3,7 +3,7 @@ layout: regulation
 title:  Responsible Exploration Toolkits
 organisation: Prospectors & Developers Association of Canada
 year: 2009
-related_commodity: Any
+categories: Any
 regulation_type: Guidelines
 permalink: /resp-exploration
 tags: environment, labour

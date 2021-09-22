@@ -5,10 +5,12 @@
 layout: default
 ---
 
-<center>
-<h1>Welcome to the Atlas of Extractive Industries</h1>
+Regulation List
 
-<a href="/archive">archive</a>
-<a href="/chart">chart</a>
-
-</center>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

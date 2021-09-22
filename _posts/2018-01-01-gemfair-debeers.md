@@ -3,7 +3,7 @@ layout: regulation
 title:  Gemfair (Pilot)
 organisation: De Beers
 year: 2018
-related_commodity: Diamonds
+categories: Diamonds
 regulation_type: Certification Schemes
 permalink: /gemfair-debeers
 tags: environment, conflict, labour

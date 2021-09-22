@@ -3,7 +3,7 @@ layout: regulation
 title:  CRAFT code
 organisation: Alliance for Responsible Mining
 year: 2018
-related_commodity: Gold
+categories: Gold
 regulation_type: Voluntary Standards
 permalink: /craft-code
 tags: environment, labor, conflict

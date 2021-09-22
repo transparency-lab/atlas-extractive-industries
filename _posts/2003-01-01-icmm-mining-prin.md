@@ -3,7 +3,7 @@ layout: regulation
 title:  ICMM Mining Principles
 organisation: International Council on Mining and Metals (ICMM)
 year: 2003
-related_commodity: Any
+categories: Any
 regulation_type: Voluntary Standards
 permalink: /icmm-mining-principles
 tags: sustainability, human rights, labour, environment

@@ -3,7 +3,7 @@ layout: regulation
 title: CIBJO Responsible Sourcing Guidance
 organisation: World Jewellery Confederation (CIBJO)
 year: 2019
-related_commodity: Diamonds
+categories: Diamonds
 regulation_type: Guidelines
 permalink: /cibjo-resp
 tags: conflict, labor

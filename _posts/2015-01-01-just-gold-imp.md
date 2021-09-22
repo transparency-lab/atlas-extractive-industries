@@ -3,7 +3,7 @@ layout: regulation
 title:  Just Gold (Pilot)
 organisation: Impact
 year: 2015
-related_commodity: Gold
+categories: Gold
 regulation_type: Traceability Providers
 permalink: /just-gold-imp
 tags: environment, conflict, labour

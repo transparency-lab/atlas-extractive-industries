@@ -3,7 +3,7 @@ layout: regulation
 title:  Better Gold Initiative
 organisation: Swiss Better Gold Association
 year: 2013
-related_commodity: Gold
+categories: Gold
 regulation_type: Voluntary Standards
 permalink: /better-gold-Swiss
 tags: environment, labour

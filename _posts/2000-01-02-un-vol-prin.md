@@ -3,7 +3,7 @@ layout: regulation
 title:  Voluntary Principles on Security and Human Rights
 organisation: United Nations
 year: 2000
-related_commodity: Any
+categories: Any
 regulation_type: Guidelines
 permalink: /un-voluntary-prin
 tags: human rights

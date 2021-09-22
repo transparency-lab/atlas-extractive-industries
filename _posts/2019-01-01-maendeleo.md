@@ -3,7 +3,7 @@ layout: regulation
 title:  Maendeleo Diamond Standards certification
 organisation: Diamond Development Initiative (DDI)
 year: 2019
-related_commodity: Diamonds
+categories: Diamonds
 regulation_type: Certification Schemes
 permalink: /maendeleo-ddi
 tags: environment, conflict, labour

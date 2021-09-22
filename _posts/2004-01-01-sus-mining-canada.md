@@ -3,7 +3,7 @@ layout: regulation
 title:  Towards Sustainable Mining (TSM)
 organisation: Mining Association of Canada
 year: 2004
-related_commodity: Any
+categories: Any
 regulation_type: Voluntary Standards
 permalink: /sust-mining-canada
 tags: environment, labour

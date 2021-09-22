@@ -3,7 +3,7 @@ layout: regulation
 title:  Fair Stone
 organisation: WiN=WiN GmbH
 year: 2009
-related_commodity: Natural Stones
+categories: Natural Stones
 regulation_type: Certification Schemes
 permalink: /fair-stone
 tags: labour

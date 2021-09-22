@@ -3,7 +3,7 @@ layout: regulation
 title:  EITI standard
 organisation: Extractive Industries Transparency Initiative
 year: 2009
-related_commodity: Any
+categories: Any
 regulation_type: Voluntary Standards
 permalink: /eiti-standard
 tags: sustainable governance

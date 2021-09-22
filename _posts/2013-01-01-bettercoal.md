@@ -3,7 +3,7 @@ layout: regulation
 title:  Bettercoal code
 organisation: Bettercoal
 year: 2013
-related_commodity: Coal
+categories: Coal
 regulation_type: Voluntary Standards
 permalink: /bettercoal-code
 tags: environment, labour

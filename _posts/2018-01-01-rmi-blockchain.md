@@ -3,7 +3,7 @@ layout: regulation
 title:  RMI's Blockchain Guidelines
 organisation: Responsible Minerals Initiative
 year: 2018
-related_commodity: Any
+categories: Any
 regulation_type: Guidelines
 permalink: /rmi-blockchain
 tags: 

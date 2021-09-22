@@ -3,7 +3,7 @@ layout: regulation
 title:  International Tin Supply Chain Initiative (ITSCI standards)
 organisation: International Tin Association
 year: 2010
-related_commodity: 3Ts
+categories: 3Ts
 regulation_type: Traceability Providers
 permalink: /itsci-standards
 tags: conflict, labour
