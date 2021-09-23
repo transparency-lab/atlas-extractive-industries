@@ -5,7 +5,7 @@ organisation: Diamond Development Initiative (DDI)
 year: 2019
 categories: Diamonds
 regulation_type: Certification Schemes
-permalink: /maendeleo-ddi
+permalink: /maendeleo-cert
 tags: environment, conflict, labour
 ---
 

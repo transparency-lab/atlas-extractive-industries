@@ -5,7 +5,7 @@ organisation: Swiss Better Gold Association
 year: 2013
 categories: Gold
 regulation_type: Voluntary Standards
-permalink: /better-gold-Swiss
+permalink: /better-gold-swiss
 tags: environment, labour
 ---
 

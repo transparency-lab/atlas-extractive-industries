@@ -5,7 +5,7 @@ organisation: World Bank
 year: 2006
 categories: Any
 regulation_type: Voluntary Standards
-permalink: /ifc-performance-stand
+permalink: /ifc-standards
 tags: environment, labour
 ---
 

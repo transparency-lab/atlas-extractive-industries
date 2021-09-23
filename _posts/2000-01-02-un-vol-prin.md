@@ -5,7 +5,7 @@ organisation: United Nations
 year: 2000
 categories: Any
 regulation_type: Guidelines
-permalink: /un-voluntary-prin
+permalink: /un-voluntary-principles
 tags: human rights
 ---
 
