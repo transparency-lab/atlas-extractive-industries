@@ -16,10 +16,11 @@ fields:
   label: year
 - type: text
   name: categories
-  label: categories
+  label: related commodities
+  description: 'note: do not use commas &amp; separate phrases with ''_'''
 - type: text
   name: regulation_type
-  label: regulation_type
+  label: regulation type
 - type: text
   name: permalink
   label: permalink
