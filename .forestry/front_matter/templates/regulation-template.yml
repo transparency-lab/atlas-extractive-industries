@@ -1,0 +1,32 @@
+---
+label: Regulation Template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: organisation
+  label: organisation
+- type: number
+  name: year
+  label: year
+- type: text
+  name: categories
+  label: related commodities
+  description: 'note: do not use commas &amp; separate phrases with ''_'''
+- type: text
+  name: regulation_type
+  label: regulation type
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: tags
+  label: tags
+- type: text
+  name: link
+  label: link
