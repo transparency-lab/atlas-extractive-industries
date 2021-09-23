@@ -1,0 +1,31 @@
+---
+label: Regulation Template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: organisation
+  label: organisation
+- type: number
+  name: year
+  label: year
+- type: text
+  name: categories
+  label: categories
+- type: text
+  name: regulation_type
+  label: regulation_type
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: tags
+  label: tags
+- type: text
+  name: link
+  label: link
