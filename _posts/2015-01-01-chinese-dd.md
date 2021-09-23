@@ -3,7 +3,7 @@ layout: regulation
 title:  Chinese Due Diligence Guidelines for Responsible Mineral Supply Chains
 organisation: China Chamber of Commerce of Metals, Minerals and Chemicals Importers & Exporters (CCCMC)
 year: 2015
-categories: 3Ts, Gold
+categories: 3Ts Gold
 regulation_type: Guidelines
 permalink: /chinese-dd
 tags: conflict

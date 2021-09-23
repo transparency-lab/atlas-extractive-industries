@@ -3,7 +3,7 @@ layout: regulation
 title:  ANSI/NSC 373 Sustainability Standard Certification
 organisation: Natural Stone Council
 year: 2014
-categories: Natural Stones
+categories: Natural_Stones
 regulation_type: Certification Schemes
 permalink: /ansi-nsc-cert
 tags: environment, labour

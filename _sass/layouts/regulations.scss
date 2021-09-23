@@ -9,9 +9,16 @@
 }
 
 .border-style {
+  background-color: #B9B9B9;
   border: 1px solid #000000;
   border-radius: 5px;
+  margin: 0.5rem;
   padding: 0.2rem;
+
+  p {
+    padding:0;
+    margin: 0;
+  }
 }
 
 // color scheme

@@ -11,7 +11,7 @@ layout: default
 
   <h3>Related Commodity:</h3>
   {% for commodity in page.categories %}
-    <div class="border-style">{{ commodity }}</div>
+    <div class="border-style">{{ commodity | replace: "_", " " | normalize_whitespace | markdownify }}</div>
   {% endfor %}
 
   <h3>Type of Regulation:</h3> <div class="border-style">{{ page.regulation_type }}</div>

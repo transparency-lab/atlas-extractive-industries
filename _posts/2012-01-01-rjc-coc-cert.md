@@ -3,7 +3,7 @@ layout: regulation
 title:  RJC Chain-of-custody (CoC) certification
 organisation: Responsible Jewellery Council
 year: 2012
-categories: Gold, Silver, Platinum Group Metals
+categories: Gold Silver Platinum_Group_Metals
 regulation_type: Voluntary Standards
 permalink: /rjc-coc-cert
 tags: conflict, labour

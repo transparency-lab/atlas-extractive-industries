@@ -3,7 +3,7 @@ layout: regulation
 title:  Responsible Source - Jewelry
 organisation: SCS Global
 year: 2012, 2015
-categories: Metals, Gemstones
+categories: Metals Gemstones
 regulation_type: Certification Schemes
 permalink: /scs-jewellery
 tags: environment

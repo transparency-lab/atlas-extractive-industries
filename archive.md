@@ -5,12 +5,12 @@
 layout: default
 ---
 
-Regulation List
+<h1>Regulation List</h1>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+Click on a regulation to learn more.
+
+{% for post in site.posts | sort: "post.title" %}
+    <div class="border-style">
+    <a href="{{ post.url }}">{{ post.title }} ({{ post.year }})</a>
+    </div>
+{% endfor %}

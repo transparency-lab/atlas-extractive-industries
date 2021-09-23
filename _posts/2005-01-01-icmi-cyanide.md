@@ -3,7 +3,7 @@ layout: regulation
 title:  International Cyanide Management Code for the Gold Mining Industry
 organisation: International Cyanide Management Institute (ICMI)
 year: 2005
-categories: Gold, Silver
+categories: Gold Silver
 regulation_type: Certification Schemes
 permalink: /icmi-cyanide
 tags: environment

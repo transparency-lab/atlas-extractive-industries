@@ -3,7 +3,7 @@ layout: regulation
 title:  LBMA Responsible Sourcing programme
 organisation: London Bullion Market Association
 year: 2012
-categories: Gold, Silver, Platinum, Palladium
+categories: Gold Silver Platinum Palladium
 regulation_type: Certification Schemes
 permalink: /lbma-sourcing
 tags: conflict, labour

@@ -3,7 +3,7 @@ layout: regulation
 title:  Trustchain (Pilot)
 organisation: IBM and Richline
 year: 2018
-categories: Gold, Diamonds
+categories: Gold Diamonds
 regulation_type: Traceability Providers
 permalink: /trustchain
 tags: traceability

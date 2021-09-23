@@ -3,7 +3,7 @@ layout: regulation
 title:  Dodd-Franck Act, Section 1502
 organisation: Dodd-Franck Act, Section 1502
 year: 2011
-categories: 3Ts, Gold
+categories: 3Ts Gold
 regulation_type: Mandatory Legal Framework
 permalink: /dodd-franck
 tags: mandatory_legal_framework
