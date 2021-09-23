@@ -10,7 +10,7 @@ layout: default
 Click on a regulation to learn more.
 
 {% for post in site.posts | sort: "post.title" %}
-    <div class="border-style">
-    <a href="{{ post.url }}">{{ post.title }} ({{ post.year }})</a>
-    </div>
+<div class="border-style">
+<a href="{{ post.url }}">{{ post.title }} ({{ post.year }})</a>
+</div>
 {% endfor %}
