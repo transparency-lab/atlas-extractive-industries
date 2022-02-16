@@ -9,11 +9,14 @@
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/atlas">
   <link rel="alternate" type="application/rss+xml" title="Atlas of Extractive Complexity" href="/feed.xml">
 
   
 
+  
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   
 
 </head>
@@ -36,24 +39,50 @@
 </div>
 </header>
     <div class="wrapper">
-      <main><center>
-<h1 class="title-intro">Atlas of Extractive Industries</h1>
+      <main><article class="post">
 
-<div class="title-description">
- Faced with increasingly knowledgeable consumers and widespread revelations about the social and ecological impact of resource extraction, the mining industry has adopted new trading standards and imposed changes to its governing bodies. In recent years, the numbers of initiatives, certification schemes, voluntary standards and sector-specific regulations have multiplied exponentially. The Atlas of Extractive Industries is a visual representation of these embedded networks of regulation. The Atlas is a product of the Transparency Lab at the Graduate Institute of International and Development Studies, Geneva.
-<br />
- Rather than assuming that transparency is the apex of an ethical economy, this research project interrogates the production of transparency in extractive industries and regulatory agencies. Empirically, this three-year project, funded by the Swiss National Science Foundation, examines how transparency is assessed, enacted, and regimented across the lifespan of minerals and metals, as well as the discursive and regulatory practices enabling the production and trade of precious minerals and metals on a global scale.
-</div>
-<div class="title-button">
- <a href="/chart">Enter the Atlas</a>
-</div>
-<div class="title-button">
- <a href="/archive">View the Regulations</a>
-</div>
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
 
-<div class="circle"></div>
+  <div class="post-content">
+    <svg id="my_dataviz" width="400" height="300"></svg>
 
-</center>
+<script>
+
+// The svg
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+// Map and projection
+var projection = d3.geoNaturalEarth1()
+    .scale(width / 1.3 / Math.PI)
+    .translate([width / 2, height / 2])
+
+// Load external data and boot
+d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", function(data){
+
+    // Draw the map
+    svg.append("g")
+        .selectAll("path")
+        .data(data.features)
+        .enter().append("path")
+            .attr("fill", "#69b3a2")
+            .attr("d", d3.geoPath()
+                .projection(projection)
+            )
+            .style("stroke", "#fff")
+})
+
+</script>
+
+<meta charset="utf-8" />
+
+
+  </div>
+
+</article>
 </main>
       <footer>© The Graduate Institute, Geneva 2019 - 2021.
 </footer>
