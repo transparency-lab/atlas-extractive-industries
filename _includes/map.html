@@ -1,1 +1,51 @@
-<meta charset="utf-8">
+<html>
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="d3-geomap" id="map"></div>
+    </body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https//unpkg.com/topojson@3/dist/topojson.min.js"></script>
+    <script src="https/d3-geomap/d3-geomap.min.js"></script>
+</html>
+
+<!-- Style !-->
+
+<style>
+
+path {
+  fill-rule: evenodd;
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+</style>
+
+<!-- HTML !-->
+
+
+<!-- Script !-->
+
+<script>
+
+  var url = "https://gist.githubusercontent.com/milafrerichs/78ef5702db2dc514fc2bed465d58406b/raw/f1366ee2a83a9afb1dd2427e9cbd4cd3db8d87ca/bundeslaender_simplify200.geojson";
+  d3.json(url).then(function(bb) {
+    let width = 200, height = 200;
+    let projection = d3.geoEqualEarth();
+    projection.fitSize([width, height], bb);
+    let geoGenerator = d3.geoPath()
+      .projection(projection);
+
+    let svg = d3.select("body").append('svg')
+      .style("width", width).style("height", height);
+
+    svg.append('g').selectAll('path')
+      .data(bb.features)
+      .join('path')
+      .attr('d', geoGenerator)
+      .attr('fill', '#088')
+    });
+
+</script>

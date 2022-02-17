@@ -14,7 +14,7 @@ layout: default
  Rather than assuming that transparency is the apex of an ethical economy, this research project interrogates the production of transparency in extractive industries and regulatory agencies. Empirically, this three-year project, funded by the Swiss National Science Foundation, examines how transparency is assessed, enacted, and regimented across the lifespan of minerals and metals, as well as the discursive and regulatory practices enabling the production and trade of precious minerals and metals on a global scale.
 </div>
 <div class="title-button">
- <a href="/chart">Enter the Atlas</a>
+ <a href="/atlas">Enter the Atlas</a>
 </div>
 <div class="title-button">
  <a href="/archive">View the Regulations</a>
